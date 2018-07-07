@@ -1,4 +1,4 @@
-    /**
+       /**
      *  Intermatic PE653 Pool Control System
      *
      *  Original Copyright 2014 bigpunk6
@@ -930,6 +930,7 @@
     	null
     }
 
+
     // Used to update our own switches state as well as the exposed Multi-channel switches
     private List createMultipleEvents (Integer instance, Integer cmdClass, Integer cmdVal, Integer externalParm, String myParm) {
     	def rslt = []
@@ -948,6 +949,7 @@
         }
         rslt
     }
+
 
     def zwaveEvent(hubitat.zwave.Command cmd) {
         log.warn "Captured zwave command $cmd"
@@ -1309,6 +1311,7 @@
         }
     	delayBetweenLog(cmds)
     }
+
 
     // Alternately turn a switch off then on a fixed number of times. Used to control the color of Pentair pool lights.
     private def blink(List switches, int cnt) {
